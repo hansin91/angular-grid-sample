@@ -1,3 +1,5 @@
 <section class="gallery">
-  Gallery
+  <figure class="gallery__item gallery__item--{{ i + 1 }}" *ngFor="let gallery of galleries; let i=index">
+    <img src="{{ gallery.image }}" alt="{{ gallery.name }}" class="gallery__img">
+  </figure>
 </section>
