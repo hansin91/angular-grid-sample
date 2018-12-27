@@ -2,11 +2,21 @@ app-sidebar[_nghost-c1] {
 	background-color: $color-primary;
 	grid-column: sidebar-start / sidebar-end;
 	grid-row: 1 / -1;
+
+	@include screen(tab-landscape) {
+		grid-column: 1 / -1;
+		grid-row: 1 / 2;
+	}
 }
 
 .sidebar {
 	display: flex;
 	justify-content: center;
+
+	@include screen(tab-landscape) {
+		justify-content: flex-end;
+		align-items: center;
+	}
 }
 
 .nav-btn {
@@ -34,5 +44,16 @@ app-sidebar[_nghost-c1] {
 	}
 	&::after {
 		transform: translateY(1.3rem);
+	}
+
+	@include screen(tab-landscape) {
+		margin-top: 2.8rem;
+		margin-right: 3rem;
+		&::before {
+			transform: translateY(-1.2rem);
+		}
+		&::after {
+			transform: translateY(1rem);
+		}
 	}
 }

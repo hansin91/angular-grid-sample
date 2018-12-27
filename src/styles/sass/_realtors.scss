@@ -1,6 +1,10 @@
 app-realtors[_nghost-c3] {
 	background-color: $color-secondary;
 	grid-column: col-start 7 / full-end;
+
+	@include screen(tab-portrait) {
+		grid-column: 1 / -1;
+	}
 }
 
 .realtors {
@@ -14,8 +18,16 @@ app-realtors[_nghost-c3] {
 
 	&__list {
 		display: grid;
-		grid-template-columns: 1fr;
 		grid-row-gap: 5vh;
+
+		@include screen(tab-portrait) {
+			display: flex;
+		}
+
+		@include screen(mobile) {
+			display: grid;
+			padding-right: 0;
+		}
 	}
 
 	&__info {
@@ -23,6 +35,13 @@ app-realtors[_nghost-c3] {
 		grid-template-columns: min-content max-content;
 		grid-column-gap: 2rem;
 		align-items: center;
+
+		@include screen(tab-portrait) {
+			grid-column: 1 / -1;
+			&:not(:last-child) {
+				padding-right: 2vw;
+			}
+		}
 	}
 
 	&__img {
