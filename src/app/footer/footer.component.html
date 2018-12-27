@@ -1,3 +1,8 @@
 <footer class="footer">
-  Footer
+  <ul class="nav">
+    <li *ngFor="let menu of menus" class="nav__item"><a href="#" class="nav__link">{{menu}}</a></li>
+  </ul>
+  <p class="copyright">
+    &copy; Copyright 2017 by Jonas Schmedtmann. Please feel free to use this project for your own purposes. This does NOT apply if you plan to produce your own course or tutorials based on this project.
+  </p>
 </footer>
