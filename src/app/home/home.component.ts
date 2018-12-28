@@ -8,7 +8,7 @@ import { Home } from 'src/models/home';
 	styleUrls: [ './home.component.scss' ]
 })
 export class HomeComponent implements OnInit {
-	private homes: Home[] = [];
+	public homes: Home[] = [];
 	constructor(private homeService: HomeService) {
 		this.homes = this.homeService.getHomes();
 	}

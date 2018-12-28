@@ -7,7 +7,7 @@ import { gallery_list } from '../../data/galleries';
 	styleUrls: [ './gallery.component.scss' ]
 })
 export class GalleryComponent implements OnInit {
-	private galleries: any;
+	public galleries: any;
 	constructor() {
 		this.galleries = gallery_list;
 	}

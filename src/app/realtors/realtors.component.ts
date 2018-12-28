@@ -8,7 +8,7 @@ import { Realtor } from 'src/models/realtor';
 	styleUrls: [ './realtors.component.scss' ]
 })
 export class RealtorsComponent implements OnInit {
-	private realtors: Realtor[] = [];
+	public realtors: Realtor[] = [];
 	constructor(private realtorService: RealtorService) {
 		this.realtors = realtorService.getRealtors();
 	}

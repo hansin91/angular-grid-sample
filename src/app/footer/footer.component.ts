@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 	styleUrls: [ './footer.component.scss' ]
 })
 export class FooterComponent implements OnInit {
-	private menus: any;
+	public menus: any;
 	constructor() {
 		this.menus = [
 			'Find your dream home',

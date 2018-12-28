@@ -8,7 +8,7 @@ import { Feature } from 'src/models/feature';
 	styleUrls: [ './feature.component.scss' ]
 })
 export class FeatureComponent implements OnInit {
-	private features: Feature[] = [];
+	public features: Feature[] = [];
 	constructor(private featureService: FeatureService) {
 		this.features = featureService.getFeatures();
 	}

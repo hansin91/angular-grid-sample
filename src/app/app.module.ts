@@ -12,6 +12,8 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { FooterComponent } from './footer/footer.component';
 import { StoryPictureComponent } from './story-picture/story-picture.component';
 import { StoryContentComponent } from './story-content/story-content.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
 	declarations: [
@@ -26,7 +28,7 @@ import { StoryContentComponent } from './story-content/story-content.component';
 		StoryPictureComponent,
 		StoryContentComponent
 	],
-	imports: [ BrowserModule, AppRoutingModule ],
+	imports: [ BrowserModule, AppRoutingModule, ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }) ],
 	providers: [],
 	bootstrap: [ AppComponent ]
 })
