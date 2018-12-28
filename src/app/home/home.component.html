@@ -2,30 +2,30 @@
   <div class="home" *ngFor="let home of homes">
     <img src="{{ home.image }}" alt="{{ home.name }}" class="home__img">
     <svg class="home__like">
-      <use xlink:href="../../assets/img/sprite.svg#icon-heart-full"></use>
+      <use xlink:href="assets/img/sprite.svg#icon-heart-full"></use>
     </svg>
     <h5 class="home__name">{{ home.name }}</h5>
     <div class="home__location">
       <svg>
-        <use xlink:href="../../assets/img/sprite.svg#icon-map-pin"></use>
+        <use xlink:href="assets/img/sprite.svg#icon-map-pin"></use>
       </svg>
       <p>{{ home.country }}</p>
     </div>
     <div class="home__rooms">
       <svg>
-        <use xlink:href="../../assets/img/sprite.svg#icon-profile-male"></use>
+        <use xlink:href="assets/img/sprite.svg#icon-profile-male"></use>
       </svg>
       <p>{{ home.room }} rooms</p>
     </div>
     <div class="home__area">
       <svg>
-        <use xlink:href="../../assets/img/sprite.svg#icon-expand"></use>
+        <use xlink:href="assets/img/sprite.svg#icon-expand"></use>
       </svg>
       <p>{{ home.area }} m<sup>2</sup></p>
     </div>
     <div class="home__price">
       <svg>
-        <use xlink:href="../../assets/img/sprite.svg#icon-key"></use>
+        <use xlink:href="assets/img/sprite.svg#icon-key"></use>
       </svg>
       <p>{{ home.price | currency: 'USD' }}</p>
     </div>
